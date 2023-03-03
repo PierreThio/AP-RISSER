@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@500;900&display=swap'); /* font-family: 'Archivo', sans-serif; */
+body{
+    font-size: 16;
+    background-color: #000000;
+}
+.titre{
+    text-align: center;
+}
+.titre1{
+    color: #ffffff;
+}
+.titre2{
+    color: #FFAC2F;
+}
+h1{
+    font-family: 'Archivo', sans-serif;
+    font-size: 3ram;
+}
