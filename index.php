@@ -1,56 +1,48 @@
 <?php
 session_start();
-include("back-end/questionnaire.php");
-$questions = getQuestions();
 ?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/questionnaire.css">
-    <title>PsychoQuizz</title>
+    <meta name="keywords" content="site">
+    <link rel="stylesheet" href="assets\css\form.css">
+    <script src="javascript.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2edda3aa9c.js" crossorigin="anonymous"></script>  
+    <title>Page d'accueil</title>
 </head>
-
 <body>
-    <h1>Psycho<span class="body__title">Quizz</span></h1>
-    <form action="<?php createResults(); ?>" method="POST">
-        <?php
-        foreach($questions as $question){
-            if($question->IDTYPEQUESTION == 1){
-                echo "<div>";
-                echo "<label>";
-                echo $question->LIBELLE;
-                echo "</label>";
-                echo "<br>";
-                echo "Oui";
-                echo "<input type='radio' value='1' name='" . $question->IDQUESTION . "'>";
-                echo "<input type='radio' value='2' name='".$question->IDQUESTION."'>";
-                echo "Non";
-                echo "</div>";
-            }
-            if($question->IDTYPEQUESTION == 2){
-                echo "<div>";
-                echo "<label>";
-                echo $question->LIBELLE;
-                echo "</label>";
-                echo "<br>";
-                echo "Oui";
-                echo "<input type='radio' value='5' name='" . $question->IDQUESTION . "'>";
-                echo "<input type='radio' value='4' name='" . $question->IDQUESTION . "'>";
-                echo "<input type='radio' value='3' name='" . $question->IDQUESTION . "'>";
-                echo "<input type='radio' value='2' name='" . $question->IDQUESTION . "'>";
-                echo "<input type='radio' value='1' name='" . $question->IDQUESTION . "'>";
-                echo "Non";
-                echo "</div>";
-            }
-            echo "<br>";
-        }
-        ?>
-        <button type="submit" name="submit">Résultats</button>
-    </form>
+
+    <!-- BODY -->
+    <img class="picture1" src="assets/picture/picture-link.png" alt="Image déco" >
+    <img class="picture2" src="assets/picture/picture-icon.png" alt="Image déco" >
+
+
+        <!-- SECTION -->
+    <div class = "section-1">
+        
+
+        <h1 id="main-title">
+        <span class = "title-part1">Psycho</span><span class = "title-part2">Quizz</span>
+        </h1>
+        <p id = "phrase-accroche">Ce quizz a été crée dans le but de déterminer quelle options, SLAM ou SISR, du BTS SIO vous convient le plus.<br> <span class = "spacer"></span> Dans le cas ou vous avez déjà fait votre choix, ce quizz vous permettra de confirmer votre choix</p>
+        <button class="button-start">Commencer</button>
+    </div>
+        <!-- SECTION END -->
+
+    <!-- BODY END-->
+    
+    
+
+
+
+    
 </body>
+
 
 </html>
