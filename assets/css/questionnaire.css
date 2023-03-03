@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@900&display=swap");
+h1 {
+  font-size: 3rem;
+}
+
+.body {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+}
+.body__title {
+  color: #FFAC2F;
+}/*# sourceMappingURL=questionnaire.css.map */
