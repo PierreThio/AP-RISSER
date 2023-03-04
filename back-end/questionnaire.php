@@ -29,18 +29,13 @@ function getResults(){
     $request = "SELECT avis.IDAVIS, avis.REP, avis.BORNEINF, avis.BORNESUP FROM avis";
     $noticesStatement = $conn->query($request);
     $notices = $noticesStatement->fetchAll(PDO::FETCH_CLASS);
-    foreach($notice as $notices){
-        if($notice->REP == 1 && $notice->BORNEINF <= $result["TOTALDEV"] && $notice->BORNSUP >= $result["TOTALDEV"]){
-            header("Location: ../results.php?id=".$notice->IDAVIS);
-        }
-        if($notice->REP == 2 && $notice->BORNEINF <= $result["TOTALRES"] && $notice->BORNESUP >= $result["TOTALRES"]){
-            header("Location: ../results.php?id=".$notice->IDAVIS);
-        }
-        if($notice->REP == 3 && $notice->BORNEINF <= $result["TOTALRES"] && $notice->BORNESUP >= $result["TOTALRES"] && $notice->BORNEINF <= $result["TOTALDEV"] && $notice->BORNESUP >= $result["TOTALDEV"]){
-            header("Location: ../results.php?id=".$notice->IDAVIS);
+    foreach($notices as $notice){
+        if($notice->BORNEDEV < $result->TOTALDEV || $notice->BORNEDEV == 0){
+            if($notice->BRONERES < $result->TOTALRES || $notice->BORNERES == 0){
+                Header("Location: results.php?avis=".$notice->IDAVIS);
+            }
         }
     }
-    
 }
 function createResults(){
     if(!isset($_POST["submit"])){
