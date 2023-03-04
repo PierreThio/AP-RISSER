@@ -15,7 +15,15 @@ $notice = getNotice();
 
 <body>
     <?php
-    echo $notice["TITRE"];
+    if ($_GET["avis"] == 1) {
+        echo "totaly dev";
+    }
+    if ($_GET["avis"] == 2) {
+        echo "reseau";
+    }
+    if ($_GET["avis"] == 3) {
+        echo "mi dev mi reseau";
+    }
     ?>
 </body>
 
