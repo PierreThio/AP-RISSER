@@ -2,7 +2,7 @@
 
 function getDatabaseConnexion()
 {
-    require("authentification-bdd.php");
+    require("utilisateur-bdd.php");
     try {
         $db = new PDO('mysql:host=' . $host . ';dbname=' . $dbname, $user, $password);
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
@@ -16,8 +16,8 @@ function getDatabaseConnexion()
 function getNotice()
 {
     $conn = getDatabaseConnexion();
-    $request = "SELECT avis.TITRE, avis.PARAG1, avis.PARAG2, avis.PARAG3 FROM avis WHERE avis.IDAVIS = " . $_GET["id"];
+    $request = "SELECT avis.TITRE, avis.PARAG1, avis.PARAG2, avis.PARAG3 FROM avis WHERE avis.IDAVIS = " . $_GET["avis"];
     $statement = $conn->query($request);
-    $notice = $statement->fetch(PDO::FETCH_UNIQUE);
+    $notice = $statement->fetch(PDO::FETCH_ASSOC);
     return $notice;
 }
