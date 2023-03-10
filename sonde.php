@@ -1,5 +1,5 @@
 <?php
-include ("backEnd/sonde.php");
+include ("back-end/sonde.php");
 $origins = getOrigins();
 ?>
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ $origins = getOrigins();
   <meta charset="utf-8">
   
   <!-- importer le fichier de style -->
-  <link rel="stylesheet" type="text/css" href="assets/css/sonde.css"/>
+  <!--<link rel="stylesheet" type="text/css" href="assets/css/sonde.css"/>   <--- ici acces CSS --> 
   <title>sonde</title>
   </head>
   <body>
@@ -20,7 +20,6 @@ $origins = getOrigins();
       <select name="origin">
       <option value="">Selctionner un parcours</option>
       <?php
-        
         foreach ($origins as $origin) {
           echo "<option value='" . $origin->IDORIGINE . "'>" . $origin->NOM . "</option>";
         }

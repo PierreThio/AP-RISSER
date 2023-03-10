@@ -32,7 +32,7 @@ session_start();
             <span class="title-part1">Psycho</span><span class="title-part2">Quizz</span>
         </h1>
         <p id="phrase-accroche">Ce quizz a été crée dans le but de déterminer quelle options, SLAM ou SISR, du BTS SIO vous convient le plus.<br> <span class="spacer"></span> Dans le cas ou vous avez déjà fait votre choix, ce quizz vous permettra de confirmer votre choix</p>
-        <button onclick="document.location.href= 'formulaire.php'" class="button-start">Commencer</button>
+        <button onclick="document.location.href= 'sonde.php'" class="button-start">Commencer</button>
     </div>
     <!-- SECTION END -->
 
