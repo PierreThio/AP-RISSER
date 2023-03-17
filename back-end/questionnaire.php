@@ -62,3 +62,4 @@ function createResults()
     }
     getResults();
 }
+?>

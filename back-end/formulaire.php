@@ -30,3 +30,4 @@ function createSonde()
         header("Location: index.php");
     }
 }
+?>
