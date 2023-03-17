@@ -5,6 +5,8 @@ $notice = getNotice();
 $scoreslam = getscoreslam();
 $scoreres = getscoreres();
 
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,23 +16,45 @@ $scoreres = getscoreres();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="back-end/baton.js"></script>
     <title>Document</title>
 </head>
 <h1>Psychoquizz</h1>
 <h2>Résultat</h2>
 
 <body>
-    <?php
-    echo "$notice";
+
+<?php
+    echo $notice["TITRE"]; 
     ?>
 
-
-    <canvas id="myChart" width="400" height="400"></canvas>
+    <br><br>
 
     <?php
-    $donnees = array($scoreslam, $scoreres);
-    $labels = array("SLAM", "SISR");
+    echo $notice["PARAG1"];
     ?>
+
+    <br><br>
+
+    <?php
+    echo $notice["PARAG2"];
+    ?>
+
+    <br><br>
+
+    <?php
+    echo $notice["PARAG3"];
+    ?>
+    
+    <canvas id="chart"></canvas>
+
+    
+
+
+
+    <script>
+        chart(<?php echo $scoreslam["scoreslam"] ?>,<?php echo $scoreres["scoreres"]?>);
+    </script>
 
 </body>
 
