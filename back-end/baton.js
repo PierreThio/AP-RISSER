@@ -26,8 +26,3 @@ function chart(scoreSlam, scoreSisr){
     }
   });
 }
-
-
-
-
-   

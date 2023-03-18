@@ -1,13 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap");
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@900&display=swap");
-h1 {
-  font-size: 3rem;
+
+
+
+
+.test {
+  border-style: solid;
+  border:20px
+
 }
 
-.body {
+div {
+  margin-top: 35px;
+  margin-bottom: 35px;
+
+}
+
+.form-control {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+
+
+.form {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   font-family: "Archivo", sans-serif;
   font-size: 16px;
 }
-.body__title {
-  color: #FFAC2F;
-}/*# sourceMappingURL=questionnaire.css.map */

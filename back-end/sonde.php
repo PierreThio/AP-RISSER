@@ -18,3 +18,14 @@ function getOrigins(){
   $origins = $q->fetchAll(PDO::FETCH_CLASS);
   return $origins;
 }
+
+function createSonde()
+{
+  if (isset($_POST["submit"])) {
+    $login = getDtbLog();
+    $request = $login->query("INSERT INTO sonde(IDORIGINE, ANNEE, SEXE) VALUES (" . $_POST["origin"] . ", " . date("Y") . ", '" . $_POST["gender"] . "')");
+    $idSonde = $login->lastInsertId();
+    $_SESSION["id"] = $idSonde;
+    header("Location: ./questionnaire.php");
+  }
+}

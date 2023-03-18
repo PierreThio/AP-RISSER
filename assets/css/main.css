@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@500;900&display=swap'); /* font-family: 'Archivo', sans-serif; */
+
+.titre{
+    text-align: center;
+}
+.titre1{
+    color: #000000;
+}
+.titre2{
+    color: #FFAC2F;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: "Archivo", sans-serif;
+    text-align: center;
+}
+
+.body {
+    font-family: "Archivo", sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.form {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Archivo", sans-serif;
+    font-size: 16px;
+}
+
+.button {
+    background-color: #FFAC2F;
+    color: black;
+    font-size: 1.5vw;
+    padding: 1.2vw 2.4vw;
+    border: none;
+    border-radius: 2vw;
+    cursor: pointer;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+.button:hover {
+    box-shadow: 0px 5px 10px rgba(5, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+  
+button.button {
+    color: white;
+    font-weight: bold;
+}
+
+
+.radio {
+    font-size: large;
+    font-weight: bolder;
+    text-transform: capitalize;
+    display: inline-block;
+    vertical-align: middle;
+    color: #000000;
+    position: relative;
+    padding-left: 30px;
+}
+
+.radio + .radio {
+    margin-left: 30px;
+}
+.radio input[type="radio"]{
+    display: none;
+}
+
+.radio span{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 3px solid #FFAC2F;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -1px;
+}
+
+.radio span:after{
+    content: "";
+    height: 9px;
+    width: 9px;
+    background-color: #FFAC2F;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    border-radius: 50%;
+    transition: 300ms ease-in-out 0s;
+}
+
+.radio input[type="radio"]:checked ~ span::after{
+    transform: translate(-50%,-50%) scale(1);
+}
