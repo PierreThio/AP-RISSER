@@ -1,64 +1,55 @@
-
+@charset "UTF-8";
 body {
-  font-family: 'Archivo', sans-serif;
-  }
-
-
+  font-family: "Archivo", sans-serif;
+}
 
 /****
 *
 * BODY
 *
 ****/
-
-// SECTION
-
-.section-1{
+.section-1 {
   display: flex;
   flex-wrap: wrap; /* Permettre aux éléments de se plier sur plusieurs lignes */
   flex-direction: column; /* Centrer les éléments sur plusieurs lignes */
   justify-content: center;
   align-items: center;
-  height: 100vh; // Donner hauteur a la section
+  height: 100vh;
 }
 
 #main-title {
   font-size: 5vw;
   text-align: center;
-  user-select: none;
-  -webkit-user-select: none; //Idem fonction
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
 }
 
-.title-part2{
+.title-part2 {
   color: #FFAC2F;
 }
 
-
-.picture1{
+.picture1 {
   max-width: 100%;
   height: 85%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   bottom: 40%;
   right: 60%;
-  
 }
 
-.picture2{
+.picture2 {
   max-width: 100%;
   height: 30%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   position: absolute;
   top: 65%;
   left: 70%;
-  
-
 }
 
-
-
-
-.button-start {  
+.button-start {
   background-color: #FFAC2F;
   color: black;
   font-size: 1.5vw;
@@ -68,21 +59,18 @@ body {
   cursor: pointer;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
-
-  
-
-  &:hover {
-    box-shadow: 0px 5px 10px rgba(5, 0, 0, 0.2);
-    transform: translateY(-2px);
-  }
+}
+.button-start:hover {
+  box-shadow: 0px 5px 10px rgba(5, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
-button.button-start{
-  color : white;
+button.button-start {
+  color: white;
   font-weight: bold;
 }
 
-#phrase-accroche{
+#phrase-accroche {
   font-size: 1.1vw;
 }
 
@@ -90,32 +78,25 @@ button.button-start{
   padding-right: 2vw;
 }
 
-
-
-
 @media (max-width: 767px) {
   #main-title {
     font-size: 40px;
   }
-  
   .button-start {
     font-size: 12px;
     padding: 12px 24px;
     border-radius: 20px;
   }
-
-  #phrase-accroche{
+  #phrase-accroche {
     font-size: 12px;
   }
 }
-
-
 @media only screen and (max-width: 768px) {
   .picture2 {
-    width: 40%; 
+    width: 40%;
     left: 10px;
   }
   .picture1 {
-    width:100%; 
+    width: 100%;
   }
-}
+}/*# sourceMappingURL=index.css.map */
