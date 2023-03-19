@@ -26,6 +26,6 @@ function createSonde()
     $request = $login->query("INSERT INTO sonde(IDORIGINE, ANNEE, SEXE) VALUES (" . $_POST["origin"] . ", " . date("Y") . ", '" . $_POST["gender"] . "')");
     $idSonde = $login->lastInsertId();
     $_SESSION["id"] = $idSonde;
-    header("Location: ./questionnaire.php");
+    header("Location: ../AP-RISSER/questionnaire.php");
   }
 }
