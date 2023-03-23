@@ -43,7 +43,7 @@ function getResults()
             Header("Location: results.php?avis=" . $notice->IDAVIS);
         }
         if ($notice->BORNERES < $result["TOTALRES"] || $notice->BORNERES != 0) {
-            
+            Header("Location: results.php?avis=" . $notice->IDAVIS);
         }
         if($notice->BORNERES != 0 && $notice->BORNEDEV != 0){
             if($notice->BORNEDEV < $result["TOTALDEV"] && $notice->BORNERES < $result["TOTALRES"]){
