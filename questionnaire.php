@@ -1,6 +1,5 @@
 <?php
 session_start();
-$_SESSION["id"] = 2;
 include("back-end/questionnaire.php");
 $questions = getQuestions();
 ?>

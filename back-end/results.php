@@ -20,4 +20,31 @@ function getNotice()
     $statement = $conn->query($request);
     $notice = $statement->fetch(PDO::FETCH_ASSOC);
     return $notice;
+    
 }
+
+
+function getscoreslam()
+{
+    $conn = getDatabaseConnexion();
+    $request = "SELECT SUM(reponseassociee.VALEURDEV) AS scoreslam FROM reponseassociee WHERE reponseassociee.IDSONDE = " . $_SESSION["id"];
+    $statement = $conn->query($request);
+    $scoreslam = $statement->fetch(PDO::FETCH_ASSOC);
+    return $scoreslam;
+}
+
+function getscoreres()
+{
+    $conn = getDatabaseConnexion();
+    $request = "SELECT SUM(reponseassociee.VALEURRES) AS scoreres FROM reponseassociee WHERE reponseassociee.IDSONDE = " . $_SESSION["id"];
+    $statement = $conn->query($request);
+    $scoreres = $statement->fetch(PDO::FETCH_ASSOC);
+    return $scoreres;
+}
+
+
+
+
+    
+
+?>

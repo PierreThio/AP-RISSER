@@ -4,11 +4,7 @@
 
 
 
-.test {
-  border-style: solid;
-  border:20px
 
-}
 
 div {
   margin-top: 35px;
@@ -16,14 +12,12 @@ div {
 
 }
 
-.form-control {
-  font-family: system-ui, sans-serif;
-  font-size: 2rem;
+.text {
+  font-family: "Archivo", sans-serif;
+  font-size: 1.5vw;
   font-weight: bold;
   line-height: 1.1;
   display: grid;
-  grid-template-columns: 1em auto;
-  gap: 0.5em;
 }
 
 
@@ -32,6 +26,9 @@ div {
   align-items: center;
   text-align: center;
   font-family: "Archivo", sans-serif;
-  font-size: 16px;
+  font-size: 1.5vw;
 }
 
+.radio {
+  margin-top: -1.5vw;
+}

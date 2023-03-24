@@ -3,6 +3,7 @@
 
 .titre{
     text-align: center;
+    
 }
 .titre1{
     color: #000000;
@@ -12,14 +13,17 @@
 }
 
 h1 {
-    font-size: 3rem;
+    padding-top: 70px;
+    font-size: 4.5vw;
     font-family: "Archivo", sans-serif;
     text-align: center;
 }
 
+
+
 .body {
     font-family: "Archivo", sans-serif;
-    font-size: 16px;
+    font-size: 1.5vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,16 +32,20 @@ h1 {
 }
 
 .form {
+    padding: 50px;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-family: "Archivo", sans-serif;
-    font-size: 16px;
+    font-size: 1.5vw;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
 }
 
 .button {
     background-color: #FFAC2F;
     color: black;
+    font-family: "Archivo", sans-serif;
     font-size: 1.5vw;
     padding: 1.2vw 2.4vw;
     border: none;
@@ -45,6 +53,7 @@ h1 {
     cursor: pointer;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease-in-out;
+    margin-top: 50px;
 }
 .button:hover {
     box-shadow: 0px 5px 10px rgba(5, 0, 0, 0.2);
@@ -58,7 +67,7 @@ button.button {
 
 
 .radio {
-    font-size: large;
+    font-size: 1.5vw;
     font-weight: bolder;
     text-transform: capitalize;
     display: inline-block;
@@ -76,20 +85,20 @@ button.button {
 }
 
 .radio span{
-    height: 15px;
-    width: 15px;
+    height: 1.0vw;
+    width: 1.0vw;
     border-radius: 50%;
-    border: 3px solid #FFAC2F;
+    border: 0.3vw solid #FFAC2F;
     display: block;
     position: absolute;
-    left: 0;
-    top: -1px;
+    left: -5px;
+    top: 0px;
 }
 
 .radio span:after{
     content: "";
-    height: 9px;
-    width: 9px;
+    height: 0.7vw;
+    width: 0.7vw;
     background-color: #FFAC2F;
     display: block;
     position: absolute;
@@ -102,4 +111,66 @@ button.button {
 
 .radio input[type="radio"]:checked ~ span::after{
     transform: translate(-50%,-50%) scale(1);
+}
+
+select {
+
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    
+
+    font-family: "Archivo", sans-serif;
+
+    flex: 1;
+    padding: 0 1em;
+    color: #fff;
+    background-color: #FFAC2F;
+    background-image: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+
+  .select {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 75px;
+    width: 20em;
+    height: 3em;
+    border-radius: .50em;
+    overflow: hidden;
+  }
+ 
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    background-color: #FFAC2F;
+    color: #ffffff;
+    transition: .25s all ease;
+    pointer-events: none;
+    
+  }
+
+  .select:hover::after {
+    box-shadow: 0px 5px 10px rgba(5, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+select {
+    font-family: "Archivo", sans-serif;
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
 }
