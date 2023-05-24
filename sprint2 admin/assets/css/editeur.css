@@ -1,0 +1,305 @@
+@charset "UTF-8";
+
+
+
+body {
+    font-family: 'Archivo Black', sans-serif;
+}
+
+/***
+**
+HEADER
+**
+***/
+
+.title ,.label-stats {
+    text-align: center;
+}
+
+
+.title{
+    font-size: 10vh;;
+}
+
+.title-part2 {
+    color: #FFAC2F;
+}
+
+.stats-item {
+    display: flex;
+    justify-content: space-between;
+    font-weight:bolder ;
+    text-decoration:underline 1px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.stats-item1 {
+    margin-left: 28%;
+    background-color: #FFAC2F;
+    cursor: pointer;
+    padding:8px;
+    border-radius: 12px;
+}
+
+.stats-item2 {
+    margin-right: 28%;
+    background-color: #FFAC2F;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+/***
+**
+END HEADER
+**
+***/
+
+
+
+
+/***
+**
+LISTE-QUESSTION
+**
+***/
+
+.question-box {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    
+}
+
+.scroll-bar {
+    height: 350px;
+    overflow-y:auto;
+    padding-left: 20%;
+
+}
+
+.question-list {
+    height: 40px;
+    width: 70%;
+    border: 3px solid #FFAC2F;
+    border-radius: 12px;
+    display: flex;
+}
+
+.question-id {
+    max-width: 100%;
+    max-height: 100%;
+    line-height: 10px;
+    border: 3px solid #FFAC2F;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.question-label {
+    margin-top: auto;
+    margin-left: 10vh ;
+    margin-bottom:auto;
+    margin-right:auto 
+}
+
+.question-icon {
+    display: flex;
+    align-items: center;
+}
+
+.fa-solid {
+    color: #FFAC2F;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.fa-wand-magic-sparkles, .fa-trash-can{
+    color: #FFAC2F;
+    border: none;
+    background-color: #ffffff;
+}
+
+/***
+**
+END LIST-QUESTION
+**
+***/
+
+
+/*
+ Personalisation Bouton "Ajouter une question" , "Modifier une question", "Supprimer une question"
+*/
+.add-question,.button-retour, .button-modif-question, .button-supp-question{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFAC2F;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+/* 
+Style page ajouter-question  AND modifier question
+*/
+.box-ajout-question {
+    border: 4px solid #FFAC2F; /* Définir la bordure de la boîte */
+    border-radius: 24px;
+    text-align: center; /* Centre le contenu de la boîte */
+    padding: 20px; /* Ajouter de l'espace entre le contenu et la bordure */
+    width: 70%; /* Définir la largeur de la boîte */
+    height: 400px;
+    margin: 0 auto; /* Centrer la boîte horizontalement */
+    text-decoration: #FFAC2F;
+}
+
+.text-area {
+    width: 75%;
+    border-radius: 10px; 
+    background-color: #f0f0f0; 
+    padding: 10px; /* Espacement intérieur */
+    font-size: 16px; 
+    border: none; /* Supprime la bordure par défaut */
+    margin-bottom: 50px;
+}
+
+.pick-id {
+    width: 20%;
+    border-radius: 10px; 
+    background-color: #f0f0f0; 
+    padding: 10px; /* Espacement intérieur */
+    font-size: 16px; 
+    border: none; /* Supprime la bordure par défaut */
+    margin-bottom: 50px;
+}
+
+.select-type-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px; /* espace de 20 pixels entre les div */
+  }
+
+
+.footer-add-question {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+    gap: 60px;
+}
+
+.little-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFAC2F;
+    border-radius: 12px;
+    border: none;
+    padding: 1vh;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+
+.little-button-supprimer { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFAC2F;
+    border-radius: 12px;
+    border: none;
+    padding: 1vh;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 40%;
+    margin-top: 50px;
+
+}
+
+
+
+
+
+/**********
+*
+*
+POPUP
+*
+*
+**********/
+
+.popup, .popup1 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content, .popup-content1 {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 3px solid #FFAC2F;
+    border-radius: 16px;
+    width: 30%;
+    text-align: center;
+}
+
+.close2, .close1 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus,
+.close2:hover,
+.close2:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup-btn1,.popup-btn2 {
+    cursor: pointer;
+}
+
+
+.bold {
+    font-weight: bold ;
+}
+
+
+
+
